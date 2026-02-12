@@ -2,6 +2,11 @@
 Automated LinkedIn post generation system using n8n, Supabase and Gemini
 #  LinkedIn Post Automation System
 
+ Status: Work in Progress (v1)
+
+This LinkedIn automation workflow is currently under development.
+Core functionality is working, advanced features are being added.
+
 This project automates LinkedIn post creation using:
 
 - n8n (Workflow Automation)
