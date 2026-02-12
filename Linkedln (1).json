@@ -1,0 +1,760 @@
+{
+  "name": "Linkedln",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Linkedln Post Planner",
+        "formDescription": "Hello,\nThis is your linkedln post",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Title",
+              "fieldType": "=text",
+              "fieldOptions": {
+                "values": [
+                  {}
+                ]
+              }
+            },
+            {
+              "fieldLabel": "Tone and audience",
+              "fieldName": "professional"
+            },
+            {
+              "fieldLabel": "Word count",
+              "defaultValue": "150"
+            },
+            {
+              "fieldLabel": "Custom Instructions"
+            },
+            {
+              "fieldLabel": "Post Date ",
+              "fieldType": "date"
+            },
+            {
+              "fieldLabel": "Post Time"
+            },
+            {
+              "fieldLabel": "Upload Post Image",
+              "fieldType": "dropdown",
+              "fieldName": "post_image",
+              "fieldOptions": {
+                "values": [
+                  {}
+                ]
+              }
+            },
+            {
+              "fieldLabel": "Share your Previous Linkedln Post (Recommended)",
+              "fieldType": "textarea"
+            },
+            {
+              "fieldLabel": "Upload Screenshots of previous post",
+              "fieldType": "file"
+            }
+          ]
+        },
+        "options": {
+          "customCss": ":root {\n\t--font-family: 'Open Sans', sans-serif;\n\t--font-weight-normal: 400;\n\t--font-weight-bold: 600;\n\t--font-size-body: 12px;\n\t--font-size-label: 14px;\n\t--font-size-test-notice: 12px;\n\t--font-size-input: 14px;\n\t--font-size-header: 20px;\n\t--font-size-paragraph: 14px;\n\t--font-size-link: 12px;\n\t--font-size-error: 12px;\n\t--font-size-html-h1: 28px;\n\t--font-size-html-h2: 20px;\n\t--font-size-html-h3: 16px;\n\t--font-size-html-h4: 14px;\n\t--font-size-html-h5: 12px;\n\t--font-size-html-h6: 10px;\n\t--font-size-subheader: 14px;\n\n\t/* Colors */\n\t--color-background: #F8F9FC;\n\t--color-test-notice-text: #0A66C2;\n\t--color-test-notice-bg: #E8F3FF;\n\t--color-test-notice-border: #0A66C2;\n\t--color-card-bg: #ffffff;\n\t--color-card-border: #E0E6EB;\n\t--color-card-shadow: rgba(63, 43, 150, 0.08);\n\t--color-link: #5A3FC0;\n\t--color-header: #2D1E6B;\n\t--color-label: #374151;\n\t--color-input-border: #D1D5DB;\n\t--color-input-text: #111827;\n\t--color-focus-border:#5A3FC0;\n\t--color-submit-btn-bg: #3F2B96;\n\t--color-submit-btn-text: #ffffff;\n\t--color-error: #DC2626;\n\t--color-required: #f4C430;\n\t--color-clear-button-bg: #F4C430;\n\t--color-html-text: #374151;\n\t--color-html-link: #5A3FC0:;\n\t--color-header-subtext: #7e8186;a\n\n\t/* Border Radii */\n\t--border-radius-card: 12px;\n\t--border-radius-input: 6px;\n\t--border-radius-clear-btn: 50%;\n\t--card-border-radius: 8px;\n\n\t/* Spacing */\n\t--padding-container-top: 24px;\n\t--padding-card: 24px;\n\t--padding-test-notice-vertical: 12px;\n\t--padding-test-notice-horizontal: 24px;\n\t--margin-bottom-card: 16px;\n\t--padding-form-input: 12px;\n\t--card-padding: 24px;\n\t--card-margin-bottom: 16px;\n\n\t/* Dimensions */\n\t--container-width: 448px;\n\t--submit-btn-height: 48px;\n\t--checkbox-size: 18px;\n\n\t/* Others */\n\t--box-shadow-card: 0px 4px 16px 0px var(--color-card-shadow);\n\t--opacity-placeholder: 0.5;\n}"
+        }
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.5,
+      "position": [
+        -608,
+        -256
+      ],
+      "id": "41a97a4f-5ff0-44a1-9db3-bfbe379d2fa7",
+      "name": "On form submission",
+      "webhookId": "e7e0710c-acd1-4e7f-92c5-e055481921df"
+    },
+    {
+      "parameters": {
+        "formTitle": "Review and Edit Linkedln Post",
+        "formDescription": "Please edit the Linkedln Post or add your customization below",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Linkedln post draft",
+              "fieldType": "textarea"
+            },
+            {
+              "fieldLabel": "What would you like to change?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Content"
+                  },
+                  {
+                    "option": "Tone"
+                  },
+                  {
+                    "option": "Length"
+                  },
+                  {
+                    "option": "Topic"
+                  },
+                  {
+                    "option": "Spelling, Grammar Mistake"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "Describe the changes you want",
+              "fieldType": "textarea",
+              "fieldName": "custom_changes"
+            },
+            {
+              "fieldLabel": "Action",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "APPROVE"
+                  },
+                  {
+                    "option": "REQUEST_CHANGES"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "Post ",
+              "fieldType": "textarea",
+              "defaultValue": "="
+            }
+          ]
+        },
+        "options": {
+          "appendAttribution": false,
+          "customCss": ":root {\n\t--font-family: 'Open Sans', sans-serif;\n\t--font-weight-normal: 400;\n\t--font-weight-bold: 600;\n\t--font-size-body: 12px;\n\t--font-size-label: 14px;\n\t--font-size-test-notice: 12px;\n\t--font-size-input: 14px;\n\t--font-size-header: 20px;\n\t--font-size-paragraph: 14px;\n\t--font-size-link: 12px;\n\t--font-size-error: 12px;\n\t--font-size-html-h1: 28px;\n\t--font-size-html-h2: 20px;\n\t--font-size-html-h3: 16px;\n\t--font-size-html-h4: 14px;\n\t--font-size-html-h5: 12px;\n\t--font-size-html-h6: 10px;\n\t--font-size-subheader: 14px;\n\n\t/* Colors */\n\t--color-background: #fbfcfe;\n\t--color-test-notice-text: #e6a23d;\n\t--color-test-notice-bg: #fefaf6;\n\t--color-test-notice-border: #f6dcb7;\n\t--color-card-bg: #ffffff;\n\t--color-card-border: #dbdfe7;\n\t--color-card-shadow: rgba(99, 77, 255, 0.06);\n\t--color-link: #7e8186;\n\t--color-header: #525356;\n\t--color-label: #555555;\n\t--color-input-border: #dbdfe7;\n\t--color-input-text: #71747A;\n\t--color-focus-border: rgb(90, 76, 194);\n\t--color-submit-btn-bg: #0A66C2;\n\t--color-submit-btn-text: #ffffff;\n\t--color-error: #ea1f30;\n\t--color-required: #ff6d5a;\n\t--color-clear-button-bg: #7e8186;\n\t--color-html-text: #555;\n\t--color-html-link: #ff6d5a;\n\t--color-header-subtext: #7e8186;\n\n\t/* Border Radii */\n\t--border-radius-card: 8px;\n\t--border-radius-input: 6px;\n\t--border-radius-clear-btn: 50%;\n\t--card-border-radius: 8px;\n\n\t/* Spacing */\n\t--padding-container-top: 24px;\n\t--padding-card: 24px;\n\t--padding-test-notice-vertical: 12px;\n\t--padding-test-notice-horizontal: 24px;\n\t--margin-bottom-card: 16px;\n\t--padding-form-input: 12px;\n\t--card-padding: 24px;\n\t--card-margin-bottom: 16px;\n\n\t/* Dimensions */\n\t--container-width: 448px;\n\t--submit-btn-height: 48px;\n\t--checkbox-size: 18px;\n\n\t/* Others */\n\t--box-shadow-card: 0px 4px 16px 0px var(--color-card-shadow);\n\t--opacity-placeholder: 0.5;\n}"
+        }
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.5,
+      "position": [
+        -464,
+        496
+      ],
+      "id": "dd1c9a38-3d6c-4205-9cc6-2bb3498bfad8",
+      "name": "Linkedln Post Edit formPl",
+      "webhookId": "6c5c878d-ff7a-42af-8135-6a2900f498e9"
+    },
+    {
+      "parameters": {
+        "sendTo": "kaletejal2909@gmail.com",
+        "subject": "Client submitted changes to Linkedln Post",
+        "message": "=The client has submitted changes to the LinkedIn post.  \nEdited Post: {{ $('Linkedln Post Edit formPl').item.json['Linkedln Post Draft'] }}\nTone: {{ $('Linkedln Post Edit formPl').item.json['What would you like to change?'] }}\nAdditional Instructions: {{ $('Linkedln Post Edit formPl').item.json.custom_changes }}\nPlease review and proceed.",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        624,
+        432
+      ],
+      "id": "bd60cd72-f5b4-4fd5-8c9b-d42d3334a065",
+      "name": "Send a message2",
+      "webhookId": "3c173a0f-2dd2-4c09-b89a-d057fd041642",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "WuYmTofhwETWjqC3",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "d42360a0-de65-4c99-a38b-991ed763a30c",
+              "leftValue": "={{ $json.Client_changes }}",
+              "rightValue": "CHANGES",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -240,
+        496
+      ],
+      "id": "bb37f2f0-68de-4af9-8dec-62a8b36a7cd4",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemma-3-1b-it",
+          "mode": "list",
+          "cachedResultName": "models/gemma-3-1b-it"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You are a professional LinkedIn content writer.\n\nRewrite the LinkedIn post based on the client's requested changes.\n\nInstructions:\n- Topic change request: {{ $json['edit the Linkedln Post'] }}\n- Tone: {{$json.tone}}\n- Client changes: {{$json.custom_changes}}\n\nRules:\n- Write like a real LinkedIn post (short paragraphs)\n- Add 3–5 relevant hashtags at the end\n- Use emojis lightly (1–2 max)\n- Keep it engaging and professional\n- Do NOT explain anything, only output the final post text"
+            }
+          ]
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        80,
+        480
+      ],
+      "id": "5b7b49d4-9593-4244-8663-9d8729dd8809",
+      "name": "Message a model1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "GeSKWa3IDE7zlTav",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "kaletejal2909@gmail.com",
+        "subject": "Updated Linkedln Post",
+        "message": "=Hello,  Thanks for sharing your feedback.   We’ve updated your LinkedIn post based on your changes.  –––––––––––––––––––– UPDATED LINKEDIN POST ––––––––––––––––––––  {{$node[\"Message a model\"].json.content.parts[0].text}}  ––––––––––––––––––––  If this looks good, please reply with: APPROVED  If you want more edits, you can submit the edit form again.  Thank you.",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        432,
+        560
+      ],
+      "id": "1fed018d-bbc8-403e-93dd-4053abe4a16a",
+      "name": "Send a message3",
+      "webhookId": "fa2d7a30-de8c-45bf-8548-14723b963600",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "WuYmTofhwETWjqC3",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://api.pexels.com/v1/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{ $('On form submission').item.json.Title }}"
+            },
+            {
+              "name": "per_page ",
+              "value": "1"
+            },
+            {
+              "name": " orientation ",
+              "value": " landscape"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "IOR5n3TNHtXE5QfTNnGeZVxmlHEFPI1CPqyc0BA63YXDhpEveCtCAnYh"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -48,
+        -144
+      ],
+      "id": "2f05759a-5090-44be-ad9e-6dd7534a2e7a",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "path": "approve_post",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        1376,
+        64
+      ],
+      "id": "96d42050-22e7-40cb-a02f-113babd1d0d1",
+      "name": "Webhook",
+      "webhookId": "71888592-557a-4c5e-a917-0262e7c2aba0"
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "=<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Post Approved</title>\n</head>\n\n<body style=\"\nmargin:0;\nfont-family: Arial, sans-serif;\nbackground: linear-gradient(#EAF4FF);\nheight:100vh;\ndisplay:flex;\nalign-items:center;\njustify-content:center;\n\">\n\n<div style=\"\nbackground:white;\npadding:40px;\nborder-radius:12px;\nbox-shadow:0 10px 30px rgba(0,0,0,0.2);\ntext-align:center;\nmax-width:420px;\nwidth:90%;\n\">\n\n<div style=\"font-size:50px;\">✅</div>\n\n<h1 style=\"\nmargin-top:10px;\ncolor:#0a66c2;\nfont-size:28px;\n\">\nPost Approved\n</h1>\n\n<p style=\"\nfont-size:16px;\ncolor:#444;\nmargin-top:15px;\n\">\nYour LinkedIn post is successfully approved.\n</p>\n\n<p style=\"\nfont-size:14px;\ncolor:#666;\nmargin-top:8px;\n\">\nPost Time: {{ new Date().toLocaleString() }}\n</p>\n\n<hr style=\"margin:25px 0; opacity:0.2;\">\n\n<p style=\"\nfont-size:13px;\ncolor:#888;\n\">\nYou can close this page.\n</p>\n\n</div>\n</body>\n</html>",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        1552,
+        64
+      ],
+      "id": "605b49ec-64d8-4d8b-b8f1-ddcdac257cdf",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a37cd7b6-25b5-45c0-8820-826dbe7cd18b",
+              "name": "final_image",
+              "value": "={{ $json.photos[0].src.medium }}",
+              "type": "string"
+            },
+            {
+              "id": "ea493cae-9238-4c95-aadd-c3d932dfe85e",
+              "name": "image_source",
+              "value": "pexels",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        176,
+        -128
+      ],
+      "id": "12ef5771-7d98-4792-902f-a9dcea4f6f24",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://upload.imagekit.io/api/v1/files/upload",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "post_image"
+            },
+            {
+              "name": "=fileName",
+              "value": "={{ $binary.post_image.fileName }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -96,
+        -400
+      ],
+      "id": "af8b5b1e-26ce-4d16-9010-2246e29a77aa",
+      "name": "HTTP Request1",
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "Y0bFRMTVg1zq3euo",
+          "name": "Unnamed credential"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "360eeb80-8c47-482e-b0bd-3ec0a640d322",
+              "name": "final_image",
+              "value": "={{ $json[\"url\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "10167109-5002-4267-9e95-a7efdbef8956",
+              "name": "image_source",
+              "value": "client",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        224,
+        -368
+      ],
+      "id": "f8822391-adfb-459d-8e76-665327f7b40d",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "sendTo": "kaletejal2909@gmail.com",
+        "subject": "Post Ready",
+        "message": "=<div style=\"font-family:Arial, sans-serif; background:#F8F9FC; padding:30px 0;\">\n  \n  <div style=\"max-width:600px;margin:auto;background:#ffffff;\n              border-radius:12px;padding:30px;\n              box-shadow:0 4px 20px rgba(63,43,150,0.08);\">\n\n    <!-- Header -->\n    <h2 style=\"color:#2D1E6B;margin-top:0;margin-bottom:10px;\">\n      Your LinkedIn Post Draft ✨\n    </h2>\n\n    <p style=\"color:#6B7280;font-size:14px;margin-top:0;\">\n      We've created a LinkedIn post draft based on your inputs.\n      Please review it below.\n    </p>\n\n    <hr style=\"border:none;border-top:1px solid #E6E8F0;margin:25px 0;\">\n\n    <!-- IMAGE -->\n    <img src=\"{{$node[\"Merge\"].json.final_image}}\" \n         style=\"width:100%;border-radius:10px;margin-bottom:20px;\" />\n\n    <!-- TITLE -->\n    <h3 style=\"color:#3F2B96;margin-bottom:8px;\">\n      {{ $('On form submission').item.json.Title }}\n    </h3>\n\n    <!-- POST TEXT -->\n    <div style=\"\n      font-size:14px;\n      line-height:1.7;\n      color:#374151;\n      word-break:break-word;\n      white-space:normal;\n    \">\n      {{ $('Message a model').item.json.content.parts[0].text\n      .replace(/\\n/g, '<br>')\n      .replace(/\\.\\s+/g, '.<br>') }}\n    </div>\n\n    <hr style=\"border:none;border-top:1px solid #E6E8F0;margin:30px 0;\">\n\n    <!-- CTA Section -->\n    <p style=\"font-weight:600;color:#2D1E6B;margin-bottom:15px;\">\n      What would you like to do next?\n    </p>\n\n    <!-- Buttons -->\n    <a href=\"http://localhost:5678/webhook/approve_post\"\n       style=\"background:#3F2B96;\n              color:#ffffff;\n              padding:10px 18px;\n              border-radius:30px;\n              text-decoration:none;\n              font-size:14px;\n              margin-right:10px;\n              display:inline-block;\">\n      Approve\n    </a>\n\n    <a href=\"http://localhost:5678/form/6c5c878d-ff7a-42af-8135-6a2900f498e9\"\n       style=\"background:#F3F0FF;\n              color:#3F2B96;\n              padding:10px 18px;\n              border-radius:30px;\n              text-decoration:none;\n              font-size:14px;\n              display:inline-block;\">\n      Request Changes\n    </a>\n\n    <p style=\"margin-top:30px;font-size:13px;color:#6B7280;\">\n      Thank you,<br>\n      <b style=\"color:#2D1E6B;\">Your Automation Team</b>\n    </p>\n\n  </div>\n</div>",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1472,
+        -352
+      ],
+      "id": "0db58b00-4e85-4fa3-9c82-eb19483bd513",
+      "name": "Send a message1",
+      "webhookId": "2cb9f955-7feb-4f8f-920f-368e8deb0a8f",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "WuYmTofhwETWjqC3",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "31069788-aacf-4004-870d-6ad179e9f276",
+              "leftValue": "={{ !!$binary.post_image }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -400,
+        -256
+      ],
+      "id": "e5425fa8-a515-462e-9c2f-7c6d00c982d4",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemma-3-1b-it",
+          "mode": "list",
+          "cachedResultName": "models/gemma-3-1b-it"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You are generating a professional LinkedIn post AND selecting an image theme for the post.\n\nThese rules are STRICT and must be followed exactly.\n\n=====================\nABSOLUTE RULES\n=====================\n- Sentences should not be too long\n- Write in professional LinkedIn tone\n- No emojis\n- No slang\n- No spelling mistakes\n- No conversational artifacts as if you are chatting with a user for ex. \"Sure , Here are some......\",\"I am glad that you....\"etc.\n- Do NOT output JSON\n- Do NOT output code\n- Do NOT output keys like title:, body:, tags:\n- Return ONLY the final post content\n\n=====================\nPOST STRUCTURE (MANDATORY)\n=====================\n\nLine 1 → BOLD TITLE (Professional)\nLine 2 → Strong hook sentence\n\nThen:\n- 2 to 3 short paragraph blocks\n- No empty lines between sentences\n\nLast Line → Hashtags only (3 to 5 hashtags)\n\n=====================\nIMAGE THEME RULES\n=====================\n\nYou must internally think about what professional LinkedIn image fits the topic.\n\nImage must be:\n- Relevant to the topic.\n- No random lifestyle images unless article is about that\n- No kitchen / random phone / random people selfie style unless related to the article\n\nExamples:\nAI → futuristic AI tech / data visualization / medical AI lab\nBusiness → corporate meeting / office teamwork / analytics dashboard\nContent Creation → digital marketing workspace / content strategy planning / laptop editing content\nEducation → classroom tech / e-learning workspace\nHealthcare → hospital technology / doctor using digital tools\n\n=====================\nINPUT\n=====================\nTopic:\n{{ $('On form submission').item.json.Title }}\n\nTone:\n{{ $('On form submission').item.json.professional }}\n\nTarget Word Count:\n{{ $('On form submission').item.json['Word count'] }}\n\nCustom Instructions:\n{{ $('On form submission').item.json['Custom Instructions'] }}\n\n\nHere is the extracted tone and style analysis of the client:\n{{ $json.content }}\n\n=====================\nOUTPUT FORMAT (FINAL)\n=====================\n\nReturn ONLY the LinkedIn post text.\n\nFormat is only suggestive dont follow it like an unbreakable rule but stay close to it without comprmising readbility\nFormat Example:\n\nTitle Here\nHook sentence here.\n\nSentence 1. Sentence 2. Sentence 3\nSentence 3. Sentence 4. \nSentence 5.\n\nSentence 6. Sentence 7.\nSentence 8. Sentence 9.\n...\n...\n\n\n#hashtag #hashtag #hashtag"
+            }
+          ]
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        656,
+        -256
+      ],
+      "id": "3a2d6ddd-270a-48a9-aa37-60b430842d95",
+      "name": "Message a model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "GeSKWa3IDE7zlTav",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "kaletejal2909@gmail.com",
+        "subject": "Post Ready",
+        "message": "=\n<div style=\"font-family:Arial,sans-serif;max-width:600px;margin:auto;\">\n\n<p>Hello,</p>\n\n<p>\nWe’ve created a LinkedIn post draft based on your inputs.\nPlease review it below.\n</p>\n\n<hr>\n\n<!-- IMAGE -->\n\n<img src=\"{{ $('Edit Fields').item.json.final_image }}\"\nstyle=\"width:100%;border-radius:8px;margin-bottom:15px;\" \n/\n\n\n\n\n<!-- TITLE -->\n<h2 style=\"margin-bottom:6px;\">\n{{ $('On form submission').item.json.Title }}\n</h2>\n\n<!-- LINKEDIN POST TEXT -->\n<div style=\"\nmax-width:520px;\nmargin:auto;\nfont-family:Arial,sans-serif;\nfont-size:14px;\nline-height:1.7;\nword-break:break-word;\nwhite-space:normal;\n\">\n{{ $('Message a model').item.json.content.parts[0].text\n.replace(/\\n/g, '<br>')\n.replace(/\\.\\s+/g, '.<br>')\n}}\n</div>\n\n\n</div>\n<hr>\n\n<p style=\"font-weight:600;\">What would you like to do next?</p>\n\n<!-- BUTTONS -->\n<a href=\"http://localhost:5678/webhook/approve_post\"\nstyle=\"background:#0a66c2;color:white;padding:10px 16px;\nborder-radius:6px;text-decoration:none;margin-right:10px;\">\nApprove\n</a>\n\n<a href=\"http://localhost:5678/form/6c5c878d-ff7a-42af-8135-6a2900f498e9\"\nstyle=\"background:#eee;color:#111;padding:10px 16px;\nborder-radius:6px;text-decoration:none;\">\nRequest Changes\n</a>\n\n<p style=\"margin-top:20px;\">\nThank you,<br>\n<b>Your Automation Team</b>\n</p>\n\n</div>",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1488,
+        -144
+      ],
+      "id": "ba3bf649-c4ee-4274-8fe4-108e9b519085",
+      "name": "Send a message",
+      "webhookId": "99599928-6186-4746-9891-0ac842ce2d2b",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "WuYmTofhwETWjqC3",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemma-3-1b-it",
+          "mode": "list",
+          "cachedResultName": "models/gemma-3-1b-it"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You are a professional LinkedIn brand voice analyst.\n\nYour task is to analyze the provided previous LinkedIn post(s) and extract the writing style and tone profile.\n\nIf text is provided, analyze the text carefully.\nIf image screenshots of LinkedIn posts are provided, extract visible text and analyze the tone and structure from them as well.\n\n---\n\nPrevious Post Text:\n{{ $json['Share your Previous Linkedln Post (Recommended)'] }}\n\n---\n\nAnalyze and extract the following:\n\n1. Primary Tone\n   (e.g., professional, storytelling, bold, motivational, educational, personal, corporate)\n\n2. Writing Style\n   (formal / conversational / direct / inspirational / analytical)\n\n3. Sentence Structure\n   (short punchy lines / long detailed paragraphs / mixed)\n\n4. Formatting Pattern\n   (short paragraphs / spaced lines / storytelling flow / list-based)\n\n5. Emoji Usage\n   (none / minimal / moderate / heavy)\n\n6. CTA Style\n   (soft CTA / strong CTA / question-based / none)\n\n7. Vocabulary Level\n   (simple / advanced / industry-specific)\n\n8. Content Personality\n   (authoritative / friendly / visionary / practical / data-driven / emotional)\n\n---\n\nReturn the output ONLY in this exact structured format:\n\nTone:\nWriting Style:\nSentence Structure:\nFormatting Pattern:\nEmoji Usage:\nCTA Style:\nVocabulary Level:\nContent Personality:\n\nDo NOT generate a new LinkedIn post.\nDo NOT explain anything.\nDo NOT add extra text.\nReturn only the structured analysis."
+            }
+          ]
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        288,
+        144
+      ],
+      "id": "1ccc0058-a4ff-4988-830d-f932f6bae63a",
+      "name": "Message a model2",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "GeSKWa3IDE7zlTav",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        496,
+        -432
+      ],
+      "id": "24e76499-4746-4b71-b87c-504c26e4afba",
+      "name": "Merge"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Linkedln Post Edit formPl": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Message a model1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model1": {
+      "main": [
+        [
+          {
+            "node": "Send a message2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send a message3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model2": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "070f80d2-5462-43e6-ad54-96aae3886ee1",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a632ba78e0bb3ea89eac4251765b4135d15c0994adac1ce1b8d1cbe5d63f43c1"
+  },
+  "id": "x_1T7AqeqEihcKr8YciFb",
+  "tags": []
+}
